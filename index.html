@@ -13,6 +13,13 @@
       color: white;
       font-family: Arial, sans-serif;
       margin: 20px;
+      overflow-y: auto;
+    }
+
+    .widget-wrapper {
+      max-height: 600px;      /* controls visible height */
+      overflow-y: auto;       /* enables scrolling */
+      padding-right: 12px;    /* keeps scrollbar visible */
     }
   </style>
 </head>
@@ -21,18 +28,20 @@
 
 <h2>Stocktwits Trending</h2>
 
-<div class="stocktwits-widget">
-<script async src="https://widgets-api.stocktwits-cdn.com/loader.js">
-{
-  "widget": "cards",
-  "quantity": 10,
-  "assetClass": "all",
-  "colorTheme": "dark",
-  "logos": true,
-  "sparklines": true,
-  "transparent": true
-}
-</script>
+<div class="widget-wrapper">
+  <div class="stocktwits-widget">
+    <script async src="https://widgets-api.stocktwits-cdn.com/loader.js">
+    {
+      "widget": "cards",
+      "quantity": 10,
+      "assetClass": "all",
+      "colorTheme": "dark",
+      "logos": true,
+      "sparklines": true,
+      "transparent": true
+    }
+    </script>
+  </div>
 </div>
 
 </body>
