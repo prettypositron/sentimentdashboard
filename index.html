@@ -1,51 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>Stocktwits Trending</title>
-
-  <meta http-equiv="refresh" content="60" />
-
-  <style>
-    body {
-      background: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 16px;
-    }
-
-    /* Make the widget take the full available width */
-    .stocktwits-widget {
-      width: 100%;
-      max-width: 1200px;      /* increase if you want wider */
-    }
-
-    /* IMPORTANT: Stocktwits injects an iframe-like container. Force it taller. */
-    .stocktwits-widget iframe,
-    .stocktwits-widget > div {
-      width: 100% !important;
-      height: 800px !important;   /* THIS fixes the “can’t see it all” problem */
-      max-height: none !important;
-    }
-  </style>
-</head>
-
-<body>
-  <h2 style="margin: 0 0 12px 0;">Stocktwits Trending</h2>
-
-  <div class="stocktwits-widget">
-    <script async src="https://widgets-api.stocktwits-cdn.com/loader.js">
-    {
-      "widget": "cards",
-      "quantity": 10,
-      "assetClass": "all",
-      "colorTheme": "dark",
-      "logos": true,
-      "sparklines": true,
-      "transparent": true
-    }
-    </script>
-  </div>
-</body>
-</html>
+<!-- Stocktwits Widget BEGIN -->
+<div class="stocktwits-widget">
+  <script async src="https://widgets-api.stocktwits-cdn.com/loader.js">
+{
+  "animated": true,
+  "assetClass": "all",
+  "colorTheme": "light",
+  "location": "US",
+  "logos": true,
+  "quantity": 10,
+  "sparklines": true,
+  "transparent": false,
+  "widget": "bar"
+}
+  </script>
+</div>
+<!-- Stocktwits Widget END -->
