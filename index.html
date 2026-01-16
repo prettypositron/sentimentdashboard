@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Stocktwits Sentiment</title>
+  <meta charset="UTF-8" />
+  <title>Stocktwits Trending</title>
 
-  <!-- Auto refresh every 60 seconds -->
-  <meta http-equiv="refresh" content="60">
+  <meta http-equiv="refresh" content="60" />
 
   <style>
     body {
-      background-color: #111;
-      color: white;
+      background: #111;
+      color: #fff;
       font-family: Arial, sans-serif;
-      margin: 20px;
-      overflow-y: auto;
+      margin: 0;
+      padding: 16px;
     }
 
-    .widget-wrapper {
-      max-height: 600px;      /* controls visible height */
-      overflow-y: auto;       /* enables scrolling */
-      padding-right: 12px;    /* keeps scrollbar visible */
+    /* Make the widget take the full available width */
+    .stocktwits-widget {
+      width: 100%;
+      max-width: 1200px;      /* increase if you want wider */
+    }
+
+    /* IMPORTANT: Stocktwits injects an iframe-like container. Force it taller. */
+    .stocktwits-widget iframe,
+    .stocktwits-widget > div {
+      width: 100% !important;
+      height: 800px !important;   /* THIS fixes the “can’t see it all” problem */
+      max-height: none !important;
     }
   </style>
 </head>
 
 <body>
+  <h2 style="margin: 0 0 12px 0;">Stocktwits Trending</h2>
 
-<h2>Stocktwits Trending</h2>
-
-<div class="widget-wrapper">
   <div class="stocktwits-widget">
     <script async src="https://widgets-api.stocktwits-cdn.com/loader.js">
     {
@@ -42,7 +47,5 @@
     }
     </script>
   </div>
-</div>
-
 </body>
 </html>
